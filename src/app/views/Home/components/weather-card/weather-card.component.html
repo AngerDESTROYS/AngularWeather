@@ -1,0 +1,19 @@
+<div *ngIf="weatherData" class="weather-card">
+  <div class="card-header">
+    <h2>{{ weatherData.name }} Weather</h2>
+    <img [src]="'http://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'" alt="Weather Icon" class="weather-icon">
+  </div>
+
+  <div class="card-body">
+    <p><strong>Temperature:</strong> {{ weatherData.main.temp }}°C</p>
+    <p><strong>Feels Like:</strong> {{ weatherData.main.feels_like }}°C</p>
+    <p><strong>Weather:</strong> {{ weatherData.weather[0].description | titlecase }}</p>
+    <p><strong>Humidity:</strong> {{ weatherData.main.humidity }}%</p>
+    <p><strong>Wind Speed:</strong> {{ weatherData.wind.speed }} m/s</p>
+    <p><strong>Coordinates:</strong> Latitude: {{ weatherData.coord.lat }}, Longitude: {{ weatherData.coord.lon }}</p>
+  </div>
+
+  <div class="card-footer">
+    <p><strong>Pressure:</strong> {{ weatherData.main.pressure }} hPa</p>
+  </div>
+</div>

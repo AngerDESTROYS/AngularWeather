@@ -1,0 +1,13 @@
+<div *ngIf="weeklyWeather">
+  <mat-accordion class="weather-accordion">
+    <mat-expansion-panel *ngFor="let day of weeklyWeather">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ day.name }} {{ day.main.temp}} °C
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <home-weather-card [weatherData]="day"></home-weather-card>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

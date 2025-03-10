@@ -1,0 +1,21 @@
+<div class="weather-container">
+  <h1>Weather App</h1>
+
+  <div class="input-container">
+    <shared-autocomplete
+      [service]="citiesService"
+      [control]="cityForm"
+      placeholder="Enter city name"
+      (selected)="getWeatherAndWeeklyForecast($event)">
+    </shared-autocomplete>
+    <button (click)="getWeatherAndWeeklyForecast(cityForm.value ?? '')">Get Weather</button>
+  </div>
+
+  <home-weather-card [weatherData]="weatherData"></home-weather-card>
+
+  <home-weekly-weather [weeklyWeather]="weeklyWeather"></home-weekly-weather>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .mat-form-field-outline {
+    border-radius: 8px;
+  }
+
+  .mat-form-field-wrapper {
+    padding: 0;
+  }
+
+  .mat-form-field-label {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-color: #007bff;
+  }
+
+  .mat-input-element {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+
+  .mat-autocomplete-panel {
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mat-option {
+    font-size: 1rem;
+    padding: 10px;
+
+    &:hover {
+      background-color: #007bff;
+      color: white;
+    }
+
+    &.mat-active {
+      background-color: #0056b3;
+      color: white;
+    }
+  }
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
